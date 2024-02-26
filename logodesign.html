@@ -1,0 +1,362 @@
+<html>
+    <head>
+        <link rel="apple-touch-icon" type="image/png" href="IconWeb.jpg" />
+    <title>Portfolio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+
+<link href='https://fonts.googleapis.com/css?family=Pacifico|Sue+Ellen+Francisco|Lobster|Montserrat' rel='stylesheet' type='text/css'>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+<script src='https://www.greensock.com/js/src/utils/SplitText.min.js'></script>
+        <style>
+            html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+html, body {
+  font-family: Montserrat;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  width: 100%;
+  height: 8em;
+  background: steelblue;
+}
+.box h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 4em;
+  padding-top: 0.5em;
+  color: white;
+}
+
+.info-cards {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.info-cards::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.info-cards .info-card {
+  -webkit-animation: pulse 0.5s;
+  -moz-animation: pulse 0.5s;
+  animation: pulse 0.5s;
+  height: 20em;
+  margin-top: 3em;
+  background: teal;
+  border-radius: 10px;
+  box-shadow: 3px 4px 3px #005a5a;
+  cursor: pointer;
+}
+@media (min-width: 1000px) {
+  .info-cards .info-card {
+    float: left;
+    display: block;
+    margin-right: 2.3576520234%;
+    width: 31.7615653177%;
+  }
+  .info-cards .info-card:last-child {
+    margin-right: 0;
+  }
+  .info-cards .info-card:nth-child(3n) {
+    margin-right: 0;
+  }
+  .info-cards .info-card:nth-child(3n+1) {
+    clear: left;
+  }
+}
+@media (max-width: 1000px) and (min-width: 650px) {
+  .info-cards .info-card {
+    float: left;
+    display: block;
+    margin-right: 2.3576520234%;
+    width: 48.8211739883%;
+  }
+  .info-cards .info-card:last-child {
+    margin-right: 0;
+  }
+  .info-cards .info-card:nth-child(2n) {
+    margin-right: 0;
+  }
+  .info-cards .info-card:nth-child(2n+1) {
+    clear: left;
+  }
+}
+@media (max-width: 650px) {
+  .info-cards .info-card {
+    float: left;
+    display: block;
+    margin-right: 2.3576520234%;
+    width: 100%;
+  }
+  .info-cards .info-card:last-child {
+    margin-right: 0;
+  }
+  .info-cards .info-card:nth-child(n) {
+    margin-right: 0;
+  }
+}
+.info-cards .info-card.full {
+  float: left;
+  display: block;
+  margin-right: 2.3576520234%;
+  width: 100%;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  height: 100vh;
+  box-shadow: 0px 0px 0px white;
+}
+.info-cards .info-card.full:last-child {
+  margin-right: 0;
+}
+.info-cards .info-card.full:nth-child(n) {
+  margin-right: 0;
+}
+.info-cards .info-card.side {
+  display: none;
+}
+.info-cards .info-card:nth-child(2) {
+  background: #3b4058;
+  box-shadow: 3px 4px 3px #3b4058;
+}
+.info-cards .info-card:nth-child(3) {
+  background: #2a6e78;
+  box-shadow: 3px 4px 3px #2a6e78;
+}
+.info-cards .info-card:nth-child(4) {
+  background: #7a907c;
+  box-shadow: 3px 4px 3px ##7a907c;
+}
+.info-cards .info-card:nth-child(5) {
+  background: ##c9b180;
+  box-shadow: 3px 4px 3px ##c9b180;
+}
+.info-cards .info-card:nth-child(6) {
+  background: #424242;
+  box-shadow: 3px 4px 3px #424242;
+}
+.info-cards .info-card i{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 4em;
+  color: white;
+}
+
+.img{
+  height: 100px; 
+  width: 100px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.info-cards .info-card span {
+  color: white;
+  position: relative;
+  left: 90%;
+  font-size: 3em;
+  display: none;
+}
+.info-cards .info-card .info {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+  display: none;
+}
+.info-cards .info-card .info h1 {
+  color: white;
+  margin-left: 0.7em;
+  font-size: 5em;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos al inicio y al final */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.header-links {
+  text-decoration: none;
+}
+
+.header-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-links ul li {
+  color: white;
+  display: inline;
+  float: right;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.header-links a {
+  color: #757575;
+  -webkit-transition: all 0.2s ease-in;
+  text-decoration: none;
+}
+
+.header-links ul li:first-child {
+    margin-left: 0; /* Elimina el margen izquierdo del primer elemento */
+}
+
+        </style>
+    </head>
+    <body>
+
+
+      <div class="nav-header">
+        <div class="nav-brand">
+          <img src="IconWeb.png" style="height: 50px; width: 50px;">
+        </div>
+        
+        <div class="header-links">
+          <ul>
+            <li data-menuanchor="secondPage"><a href="index.html">INICIO</a></li>
+            
+          </ul>
+        </div>
+      </div>
+
+        
+<div class="info-cards">
+    <div class="info-card"><span class="exit">x</span><img src="IconSDMLOGOBlanco2.png"style="height: 100px; width: 100px; position: relative;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);">
+      <div class="info">
+        <h1>2DSM</h1>
+      </div>
+    </div>
+    <div class="info-card"><span class="exit">x</span><img src="IconYoikarBlanco.png" style="height: 100px; width: 100px; position: relative;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);">
+      <div class="info">
+        <h1>Yoikar</h1> 
+      </div>
+    </div>
+    <div class="info-card"><span class="exit">x</span><img src="IconHashMapBlanco.png" style="height: 100px; width: 100px; position: relative;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);">
+      <div class="info">
+        <h1>HashMap</h1>
+      </div>
+    </div>
+    <div class="info-card"><span class="exit">x</span><img src="IconHCMBlanco.png"style="height: 100px; width: 100px; position: relative;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);">
+      <div class="info">
+        <h1>HCM</h1>
+      </div>
+    </div>
+    <div class="info-card"><span class="exit">x</span><img src="IconCENZOBLANCO2.png"style="height: 100px; width: 150px; position: relative;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);">
+      <div class="info">
+        <h1>CENZO</h1>
+      </div>
+    </div>
+    <div class="info-card"><span class="exit">x</span><img src="IconMetaBidBlac.png"style="height: 100px; width: 120px; position: relative;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);">
+      <div class="info">
+        <h1>Metabid</h1>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function() {
+  $(".exit").hide();
+
+  $(".info").hide();
+
+  $(function() {
+    var open;
+    open = true;
+    return $(".info-card").click(function() {
+      if (open) {
+        $(this).siblings().removeClass("full");
+        $(this).addClass("full");
+        $(this).removeClass("side");
+        $(this).siblings().addClass("side");
+        $(this).find(".exit").css("display", "inline");
+        $(".info").show();
+        return open = !open;
+      } else {
+        $(this).siblings().removeClass("full");
+        $(this).removeClass("full");
+        $(this).removeClass("side");
+        $(this).siblings().removeClass("side");
+        $(this).find(".exit").css("display", "none");
+        $(".info").hide();
+        return open = !open;
+      }
+    });
+  });
+
+}).call(this);
+  </script>
+    </body>
+</html>

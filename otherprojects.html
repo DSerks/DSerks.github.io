@@ -1,197 +1,78 @@
 <html>
-    <head>
-        <link rel="apple-touch-icon" type="image/png" href="IconWeb.jpg" />
-    <title>Portfolio</title>
-    <style>
-        @import url(https://fonts.googleapis.com/css?family=Hind:300,400,600);
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
-body {
-	background:#f5f5f5;
-	margin:0px;
-	padding:0px;
-	font-family: 'Hind', sans-serif;
-	color:#020202;
-}
-h1, h2, h3, h4, h5 {
+	<head>
+		<link rel="apple-touch-icon" type="image/png" href="IconWeb.jpg" />
+		<title>Portfolio</title>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
 	
-}
-*, a {
-	text-decoration: none;
-}
-#nav_wrap {
-	width:100%;
-	height:90px;
-	margin:auto;
-	position:fixed;
-}
-.nav {
-	width:90%;
-	height:90px;
-	max-width:1240px;
-	margin:auto;
-}
-#page_hero {
-	height:200px;
-	width:100%;
-	background:#282836;
-}
-#page_content {
-	width:100%;
-	margin:auto;
-}
-.card_wrap {
-	max-width:1240px;
-  display: flex;
-  flex-wrap: wrap;
-	flex-direction: column;
-	margin:0 auto;
-	position: relative;
-	top:-116px;
-}
-.card_headline {
-	font-family: 'Oswald', sans-serif;
-	margin:auto;
-	width:100%;
-	max-width:1000px;
-	display:flex;
-	flex-direction: row;
-  justify-content: center;
-	text-align:center;
-	text-transform:uppercase;
-	color:#59c379;
-	letter-spacing:1.2px;
-}
-.card_headline::before, .card_headline::after {
-	flex-grow: 1;
-	content: '\a0';
-	height:1px;
-	box-sizing: inherit;
-	position: relative;
-  	top: 1.75em;
-	background:#59c379;
-}
-.card_headline::before {
-	margin:0 1em 0 0;
-}
-.card_headline::after {
-	margin:0 0 0 1em;
-}
-.card_headline_int {
-	margin: 1.33em 0;
-	font-weight: 300;
-}
-.card {
-	max-width:1000px;
-	width:100%;
-	height:560px;
-	margin:0 auto;
-	display: flex;
-	overflow:hidden;
-}
-.new_card {
-	margin:100px auto;
-}
-.card_desc {
-	width:44%;
-	height:560px;
-	margin:0 0;
-	background:#fff;
-	flex: 1 1 0%;
-}
-.card_img {
-	width:56%;
-	height:560px;
-	margin:0 0;
-	overflow:hidden;
-}
-.card_img_box {
-	width:89%;
-	height:89%;
-	background-size:cover;
-}
-.img_left {
-	margin:11% 0 0 12%;
-	-webkit-box-shadow: -5px -5px 120px -5px rgba(0,0,0,0.5);
-	-moz-box-shadow: -5px -5px 120px -5px rgba(0,0,0,0.5);
-	box-shadow: -5px -5px 120px -5px rgba(0,0,0,0.5);
-}
-.img_right {
-	margin:11% 12% 0 0;
-	-webkit-box-shadow: 5px -5px 120px -5px rgba(0,0,0,0.5);
-	-moz-box-shadow: 5px -5px 120px -5px rgba(0,0,0,0.5);
-	box-shadow: 5px -5px 120px -5px rgba(0,0,0,0.5);
-}
-.divine_lorraine {
-	background:#434c44;
-}
-.divine_lorraine > .card_img_box {
-	background:url('https://i.imgur.com/QSAGGl3.png') no-repeat;
-}
-.gulls_cove {
-	background:#b45c34;
-}
-.gulls_cove > .card_img_box {
-	background:url('https://i.imgur.com/yHTAa12.png') no-repeat;
-}
-.card_desc_int {
-	padding:55px 60px;
-}
-.card_title {
-	font-family:'Oswald', sans-serif;
-	text-transform:uppercase;
-	letter-spacing:1.45px;
-	font-weight:600;
-	font-size:1.29em;
-	margin:0 0 4px 0;
-}
-.card_subtitle {
-	margin:-5px 0px;
-	font-size:0.82em;
-	font-weight:600;
-	color:#dbbd56;
-}
-.card_article {
-	margin:15px 0 0px 0;
-	font-weight:300;
-	line-height:1.4em;
-}
-.article_link {
-	display:inline-block;
-	text-transform:capitalize;
-	margin:20px 0;
-}
-.fancy_link {
-	text-decoration:none;
-	color:#020;
-	font-weight:600;
-	font-size:0.92em;
-	letter-spacing: 1.25px;
-	border-bottom:1px solid #020;
-}
-.fancy_link:hover {
-	color:#3f77bd;
-	border-bottom:1px solid #3f77bd;
+	<link href='https://fonts.googleapis.com/css?family=Pacifico|Sue+Ellen+Francisco|Lobster|Montserrat' rel='stylesheet' type='text/css'>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+	<script src='https://www.greensock.com/js/src/utils/SplitText.min.js'></script>
+	  <style>
+body {
+  font-family: "Raleway", sans-serif !important;
 }
 
+/* Nav Screen */
 
-.nav-header {
-    display: flex;
-    justify-content: space-between; /* Alinea los elementos al inicio y al final */
-    align-items: center; /* Centra verticalmente los elementos */
-	background: #282836;
+.nav-screen {
+  height: 100%;
+  z-index: 500;
+  position: fixed;
+  background-color: #000;
+  opacity: 1;
+  right: -285px; /* start off behind the scenes */
+  -webkit-font-smoothing: antialiased;
+  position: fixed;
+  width: 285px;
+}
+
+.nav-screen .active {
+  display: block;
+}
+
+/* nav header links */
+
+.nav-brand {
+  position: fixed;
+  padding-left: 30px;
+  padding-top: 5px;
+  z-index: 600;
+}
+
+.nav-brand img {
+  width: 50px;
+}
+
+.fa-bars {
+  display: none !important;
+  color: #ff6363;
+  float: right;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  z-index: 500;
+  cursor: pointer;
+}
+
+.fa-times {
+  color: #ff6363;
+  float: right;
+  padding: 20px;
+  right: 0;
+  z-index: 600;
+  cursor: pointer;
 }
 
 .header-links {
-  text-decoration: none;
+  position: fixed;
+  width: 100%;
+  z-index: 500;
 }
 
-.header-links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.header-links ul li {
+.header-links li {
   color: white;
   display: inline;
   float: right;
@@ -202,90 +83,408 @@ h1, h2, h3, h4, h5 {
 .header-links a {
   color: #757575;
   -webkit-transition: all 0.2s ease-in;
+}
+
+.header-links a:hover {
+  color: #ff6363 !important;
+}
+
+/* slide out nav menu styles */
+
+.nav-container {
+  padding-top: 10%;
+}
+
+.nav-links {
+  width: 250px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-links ul {
+  margin-top: 15%;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.nav-links a {
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 2.5;
+  font-weight: bold;
   text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.header-links ul li:first-child {
-    margin-left: 0; /* Elimina el margen izquierdo del primer elemento */
+.nav-links a:hover {
+  color: #ff6363;
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
+#fp-nav ul li .fp-tooltip {
+  color: #5f5f5f !important;
+}
+
+/* Expanding border effect */
+
+.header-links a::after {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  content: "";
+  opacity: 0;
+  -webkit-transition: width 0.6s, opacity 0.8s;
+  -moz-transition: width 0.6s, opacity 0.8s;
+  transition: width 0.6s, opacity 0.8s;
+}
+
+.header-links a:hover::after,
+.header-links a:focus::after {
+  opacity: 1;
+  width: 100%;
+}
+
+/* Nav_End */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Open Sans', sans-serif; */
+  font-size: 18px;
+}
+
+html, body {
+  height: 100vh;
+}
+
+/* Get entry-wrappers images */
+#entry-1 {
+  background: url('OT_LCE.png');
+  background-size: cover;
+}
+#entry-2 {
+  background: url('OT_CE.png');
+  background-size: cover;
+}
+
+#entry-3 {
+  background: url('OT_PA.png');
+  background-size: cover;
+}
+
+#entry-4 {
+  background: url('OT_SG.jpg');
+  background-size: cover;
+}
+
+
+
+.header {
+  padding: 20px 0 0 30px;
+  height: 130px;
+  width: 100%;
+  opacity: 0.8;
+  background: #fff;
+  position: fixed;
+  z-index: 10;
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    li {
+      text-transform: uppercase;
+      padding: 20px 10px 0px 20px;
+      a {
+        text-decoration: none;
+        color: #8a8a8a;
+        &.active {
+          color: #222;
+          border-bottom: 2px solid #222;
+        }
+        &:hover {
+          color: #222;
+          border-bottom: 2px solid #222; 
+        }
+      }
+    }
+  }
+}
+
+.details {
+  display: none;
+  padding: 130px 25px 25px 50px;
+  width: 100%;
+  .detail {
+    text-align: justify;
+    h1 {
+      padding-bottom: 20px;
+      font-size: 18px;
+    }
+    width: 100%;
+    @media (min-width: 1024px)   {
+      width: 300px;
+      position: fixed;
+    }
+  }
+  .content {
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+    @media (min-width: 1024px) {
+      padding-top: 0px;
+      margin-left: 400px;
+      width: 50%;
+    }
+    @media (min-width: 1440px){ 
+      margin-left: 450px;
+      width: 60%; 
+    }
+    @media (min-width: 1680px){ 
+      margin-left: 500px;
+      width: 60%;  
+    }
+  }
+}
+
+.wrap {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding-top: 130px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  .entry-wrapper {
+    height: 400px;
+    width: 400px;
+    font-size: 14px;
+    line-height: 1.5em;
+    font-weight: 400;
+    font-style: normal;
+    color: #454545;
+    position: relative;
+    a {
+      text-decoration: none;
+      .entry-content {
+        padding: 170px 0 0 0;
+        background: #000;
+        color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        height: 400px;
+        width: 400px;
+        text-align: center;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        @media(min-width: 768px) {
+          width: 400px;
+        }
+        h2 {
+          padding: 30px;
+		  font-size: 30px;
+		  line-height: normal;
+        }
+        h3 {
+          padding: 5px;
+        }
+      }    
+    }
+    &:hover {
+      .entry-content {
+        opacity: 0.8;
+        visibility: visible;
+      }
+    }
+  } 
+}
     </style>
     </head>
     <body>
 
-
 		<div class="nav-header">
 			<div class="nav-brand">
-			  <img src="IconWeb.png" style="height: 50px; width: 50px;">
+			  <a href="index.html"><img src="IconWeb.png" style="height: 50px; width: 50px;"></a>
 			</div>
-			<i class="fa fa-bars fa-3x"></i>
+			
 			<div class="header-links">
 			  <ul>
 				<li data-menuanchor="secondPage"><a href="index.html">INICIO</a></li>
 				
 			  </ul>
 			</div>
+		  </div> 
+
+<!-- D1 -->
+		  <div id="details" class="details">
+			<div class="detail">
+			  <h1>Eternal hunters</h1>
+			  <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it?
+		  </p>
+			</div>
+			<div class="content"> 
+			  <img src="Ilu_1MundoPlayera.png"/>
+			  <img src="Ilu_2PlayeraBlancaChopperDr.png"/>
+			  <img src="Ilu_3Asce.png"/>
+			</div>
 		  </div>
-	
 
+<!-- D2 -->
+		  <div id="details2" class="details">
+			<div class="detail">
+			  <h1>Cenzo headphones</h1>
+			  <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it?
+		  </p>
+			</div>
+			<div class="content"> 
+			  <img src="Ilu_1MundoPlayera.png"/>
+			  <img src="Ilu_2PlayeraBlancaChopperDr.png"/>
+			  <img src="Ilu_3Asce.png"/>
+			</div>
+		  </div>
 
-        <div id="page_content">
-            <div id="page_hero">
-                <div class="hero_wrap">
-                </div>
-            </div>
-            <div class="card_wrap">
-                <div class="card_headline">
-                    <h5 class="card_headline_int">
-                        Our Investments
-                    </h5>
-                </div>
-                <!--New Card-->
-                <div class="card">
-                    <div class="card_img left divine_lorraine">
-                        <div class="card_img_box img_left">
-                        </div>
-                    </div>
-                    <div class="card_desc right">
-                        <div class="card_desc_int">
-                            <h3 class="card_title">
-                                Divine Lorraine
-                            </h3>
-                            <p class="card_subtitle">699 North Broad Street, Philadelphia</p>
-                            <p class="card_article">
-                                The Divine Lorraine Hotel stands at the corner of Broad Street and Fairmount Avenue in North Philadelphia, Pennsylvania. Designed by architect Willis G. Hale and built between 1892 and 1894, the building originally functioned as apartments, housing some of Philadelphia's wealthy residents. In 1900 the building became the Lorraine Hotel when the Metropolitan Hotel Company purchased the apartments. Later it would become the first hotel in Philadelphia to be racially integrated under Father Divine.
-                            </p>
-                            <div class="article_link">
-                                <a href="#" class="fancy_link">View Project Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--New Card-->
-                <div class="card new_card">
-                    <div class="card_desc left">
-                        <div class="card_desc_int">
-                            <h3 class="card_title">
-                                Gulls Cove
-                            </h3>
-                            <p class="card_subtitle">201 Marin Boulevard, Jersey City</p>
-                            <p class="card_article">						
-                                Gull's Cove is a luxury condominium in Jersey City. Residents enjoy a combination of luxury, convenience and oversized modern apartments. With a 24/7 Concierge, beautiful lobby, common outdoor patio, indoor parking, the Hudson-Bergen light rail just outside the front door and the Grove Street Path station a few blocks away, Gull's Cove is a perfect place to live. Also, to the convenience of all residents, there is a doggie daycare center, dry cleaner, and child day care on the first floor of the building.
-                            </p>
-                            <div class="article_link">
-                                <a href="#" class="fancy_link">View Project Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card_img right gulls_cove">
-                        <div class="card_img_box img_right">
-                        </div>
-                    </div>
-                </div>
-            </div><!--Card Wrap Close-->
-        </div>
-        <footer>
-        
-        </footer>  
+<!-- D3 -->
+		  <div id="details3" class="details">
+			<div class="detail">
+			  <h1>The principles of animation</h1>
+			  <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it?
+		  </p>
+			</div>
+			<div class="content"> 
+			  <img src="Ilu_1MundoPlayera.png"/>
+			  <img src="Ilu_2PlayeraBlancaChopperDr.png"/>
+			  <img src="Ilu_3Asce.png"/>
+			</div>
+		  </div>
+
+<!-- D4 -->
+		  <div id="details4" class="details">
+			<div class="detail">
+			  <h1>Sushin Gonzales Mexico/Japon</h1>
+			  <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it?
+		  </p>
+			</div>
+			<div class="content"> 
+			  <img src="Ilu_1MundoPlayera.png"/>
+			  <img src="Ilu_2PlayeraBlancaChopperDr.png"/>
+			  <img src="Ilu_3Asce.png"/>
+			</div>
+		  </div>
+
+<!-- Cards -->
+		  <div class="wrap" onclick='show()'>
+			<div id="entry-1" class="entry-wrapper">
+				<a href="#">
+				 <article class="entry-content">
+					<h2>Eternal hunters</h2>
+					<h3>— view —</h3>
+				  </article>
+				</a>
+			  </div>
+
+			  <div id="entry-2" class="entry-wrapper">
+				<a href="#">
+				  <article class="entry-content">
+					<h2>Cenzo headphones</h2>
+					<h3>— view —</h3>
+				  </article>
+				</a>
+			  </div>  
+
+			<div id="entry-3" class="entry-wrapper">
+			  <a href="#">
+			   <article class="entry-content">
+				  <h2>The principles of animation</h2>
+				  <h3>— view —</h3>
+				</article>
+			  </a>
+			</div>
+
+			<div id="entry-4" class="entry-wrapper">
+			  <a href="#">
+				<article class="entry-content">
+				  <h2>Sushin Gonzales Mexico/Japon </h2>
+				  <h3>— view —</h3>
+				</article>
+			  </a>
+			</div>
+		  </div>
+
+		  <!-- Javascript -->
+
+		  <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+		  <script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'></script>
+		  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
+		  <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js'></script>
+
+		  <script>
+// D1
+			var show = function() {
+el = document.getElementById("details");
+  el.style.display = 'block';
+}
+
+var hide = function() {
+el = document.getElementById("details");
+  el.style.display = 'none';
+}
+
+// D2
+var show = function() {
+el = document.getElementById("details2");
+  el.style.display = 'block';
+}
+
+var hide = function() {
+el = document.getElementById("details2");
+  el.style.display = 'none';
+}
+
+// D3
+var show = function() {
+el = document.getElementById("details3");
+  el.style.display = 'block';
+}
+
+var hide = function() {
+el = document.getElementById("details3");
+  el.style.display = 'none';
+}
+
+// D4
+var show = function() {
+el = document.getElementById("details4");
+  el.style.display = 'block';
+}
+
+var hide = function() {
+el = document.getElementById("details4");
+  el.style.display = 'none';
+}
+
+		  </script>
+
     </body>
+
 </html>

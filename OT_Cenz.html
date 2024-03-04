@@ -1,0 +1,395 @@
+<html>
+	<head>
+		<link rel="apple-touch-icon" type="image/png" href="IconWeb.jpg" />
+		<title>Portfolio</title>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+	
+	<link href='https://fonts.googleapis.com/css?family=Pacifico|Sue+Ellen+Francisco|Lobster|Montserrat' rel='stylesheet' type='text/css'>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+	<script src='https://www.greensock.com/js/src/utils/SplitText.min.js'></script>
+	  <style>
+body {
+  font-family: "Raleway", sans-serif !important;
+}
+
+/* Nav Screen */
+
+.nav-screen {
+  height: 100%;
+  z-index: 500;
+  position: fixed;
+  background-color: #000;
+  opacity: 1;
+  right: -285px; /* start off behind the scenes */
+  -webkit-font-smoothing: antialiased;
+  position: fixed;
+  width: 285px;
+}
+
+.nav-screen .active {
+  display: block;
+}
+
+/* nav header links */
+
+.nav-brand {
+  position: fixed;
+  padding-left: 30px;
+  padding-top: 5px;
+  z-index: 600;
+}
+
+.nav-brand img {
+  width: 50px;
+}
+
+.fa-bars {
+  display: none !important;
+  color: #ff6363;
+  float: right;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  z-index: 500;
+  cursor: pointer;
+}
+
+.fa-times {
+  color: #ff6363;
+  float: right;
+  padding: 20px;
+  right: 0;
+  z-index: 600;
+  cursor: pointer;
+}
+
+.header-links {
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+}
+
+.header-links li {
+  color: white;
+  display: inline;
+  float: right;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.header-links a {
+  color: #757575;
+  -webkit-transition: all 0.2s ease-in;
+}
+
+.header-links a:hover {
+  color: #ff6363 !important;
+}
+
+/* slide out nav menu styles */
+
+.nav-container {
+  padding-top: 10%;
+}
+
+.nav-links {
+  width: 250px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-links ul {
+  margin-top: 15%;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.nav-links a {
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 2.5;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-links a:hover {
+  color: #ff6363;
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+#fp-nav ul li .fp-tooltip {
+  color: #5f5f5f !important;
+}
+
+/* Expanding border effect */
+
+.header-links a::after {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  content: "";
+  opacity: 0;
+  -webkit-transition: width 0.6s, opacity 0.8s;
+  -moz-transition: width 0.6s, opacity 0.8s;
+  transition: width 0.6s, opacity 0.8s;
+}
+
+.header-links a:hover::after,
+.header-links a:focus::after {
+  opacity: 1;
+  width: 100%;
+}
+
+/* Nav_End */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Open Sans', sans-serif; */
+  font-size: 18px;
+}
+
+html, body {
+  height: 100vh;
+}
+
+/* Get entry-wrappers images */
+#entry-1 {
+  background: url('OT_LCE.png');
+  background-size: cover;
+}
+#entry-2 {
+  background: url('OT_CE.png');
+  background-size: cover;
+}
+
+#entry-3 {
+  background: url('OT_PA.png');
+  background-size: cover;
+}
+
+#entry-4 {
+  background: url('OT_SG.jpg');
+  background-size: cover;
+}
+
+
+
+.header {
+  padding: 20px 0 0 30px;
+  height: 130px;
+  width: 100%;
+  opacity: 0.8;
+  background: #fff;
+  position: fixed;
+  z-index: 10;
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    li {
+      text-transform: uppercase;
+      padding: 20px 10px 0px 20px;
+      a {
+        text-decoration: none;
+        color: #8a8a8a;
+        &.active {
+          color: #222;
+          border-bottom: 2px solid #222;
+        }
+        &:hover {
+          color: #222;
+          border-bottom: 2px solid #222; 
+        }
+      }
+    }
+  }
+}
+
+.details {
+  display: block ;
+  padding: 130px 25px 25px 50px;
+  width: 100%;
+  .detail {
+    text-align: justify;
+    h1 {
+      padding-bottom: 20px;
+      font-size: 30px;
+    }
+    width: 100%;
+    @media (min-width: 1024px)   {
+      width: 300px;
+      position: fixed;
+    }
+  }
+  .content {
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+    @media (min-width: 1024px) {
+      padding-top: 0px;
+      margin-left: 400px;
+      width: 50%;
+    }
+    @media (min-width: 1440px){ 
+      margin-left: 450px;
+      width: 60%; 
+    }
+    @media (min-width: 1680px){ 
+      margin-left: 500px;
+      width: 60%;  
+    }
+  }
+}
+
+.wrap {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  background: #000000;
+  padding-top: 130px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  .entry-wrapper {
+    height: 400px;
+    width: 400px;
+    font-size: 14px;
+    line-height: 1.5em;
+    font-weight: 400;
+    font-style: normal;
+    color: #454545;
+    position: relative;
+    a {
+      text-decoration: none;
+      .entry-content {
+        padding: 170px 0 0 0;
+        background: #000;
+        color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        height: 400px;
+        width: 400px;
+        text-align: center;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        @media(min-width: 768px) {
+          width: 400px;
+        }
+        h2 {
+          padding: 30px;
+		  font-size: 30px;
+		  line-height: normal;
+        }
+        h3 {
+          padding: 5px;
+        }
+      }    
+    }
+    &:hover {
+      .entry-content {
+        opacity: 0.8;
+        visibility: visible;
+      }
+    }
+  } 
+}
+    </style>
+    </head>
+    <body>
+
+		<div class="nav-header">
+			<div class="nav-brand">
+			  <a href="index.html"><img src="IconWeb.png" style="height: 50px; width: 50px;"></a>
+			</div>
+			
+			<div class="header-links">
+			  <ul>
+				<li data-menuanchor="secondPage"><a href="index.html">INICIO</a></li>
+				
+			  </ul>
+			</div>
+		  </div> 
+
+<!-- D1 -->
+		  <div id="details" class="details">
+			<div class="detail">
+			  <h1>Cenzo headphones</h1>
+			  <p>It is an audio brand concept called Cenzo, for which a fictitious product was created. This product consists of headphones made entirely from scratch in the 3D software "Blender." The process involved working from modeling to texturing of various materials, such as metal, plastic, and leather, to achieve renders that serve as a product presentation, complete with the brand's entire branding.</p>
+			</div>
+			<div class="content"> 
+			  <img src="OT_CE1.jpg"/>
+              <img src="OT_CE2.jpg"/>
+              <img src="OT_CE3.jpg"/>
+              <img src="OT_CE4.jpg"/>
+              <img src="OT_CE5.jpg"/>
+			</div>
+		  </div>
+
+<!-- Cards -->
+<div class="wrap" onclick='show()'>
+    <div id="entry-1" class="entry-wrapper">
+        <a href="OT_EterHunt.html">
+         <article class="entry-content">
+            <h2>Eternal hunters</h2>
+            <h3>— view —</h3>
+          </article>
+        </a>
+      </div>
+
+      <div id="entry-2" class="entry-wrapper">
+        <a href="OT_Cenz.html">
+          <article class="entry-content">
+            <h2>Cenzo headphones</h2>
+            <h3>— view —</h3>
+          </article>
+        </a>
+      </div>  
+
+    <div id="entry-3" class="entry-wrapper">
+      <a href="OT_PrinAnim.html">
+       <article class="entry-content">
+          <h2>The principles of animation</h2>
+          <h3>— view —</h3>
+        </article>
+      </a>
+    </div>
+
+    <div id="entry-4" class="entry-wrapper">
+      <a href="OT_SushGonz.html">
+        <article class="entry-content">
+          <h2>Sushin Gonzales Mexico/Japon </h2>
+          <h3>— view —</h3>
+        </article>
+      </a>
+    </div>
+  </div>
+
+    </body>
+
+</html>
